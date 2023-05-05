@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --b: #111411;
+  --w: #FEFBE9;
+  --gra: #E1EEDD; /*was t*/
+  --gre: #183A1D; /*was r*/
+  --g: #F0A04B; /*was y*/
+  --gl: #F4CA9E; /*was yl*/
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+ }
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-color: var(--w);
+}
+
+p {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+  font-size: 15px;
+  color: var(--b);
+  padding: 0px 15px 20px 25px;
+}
+
+.captcha {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  color: var(--g);
+  font-size: 13px;
+}
+
+h1 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  color: var(--g);
+  line-height: 150%;
+  padding: 20px 15px 5px 25px;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  color: var(--gre);
+  line-height: 150%;
+  padding: 20px 15px 5px 25px;
+  text-align: left;
+}
+
+.ytext {
+  color: var(--g);
+}
+
+.button {
+  font-family: 'Outfit', sans-serif;
+  line-height: 50px;
+  font-weight: 600;
+  color: var(--b);
+  padding: 12px;
+  background-color: var(--g);
+  border-radius: 7px;
+  text-align: center;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.button:hover {
+  background-color: var(--gre);
+  color: var(--gra);
+  cursor: pointer;
+}
+
+.reverse {
+  background-color: transparent;
+  border: var(--g) solid 3px;
+  color: var(--g);
+  transition: .3s;
+}
+
+.reverse:hover {
+  background-color: transparent;
+  border-color: var(--gra);
+  color: var(--gra);
+  cursor: pointer;
+}
+
+.link {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  color: var(--g);
+  text-decoration: none;
+  transition: .3s;
+}
+
+.link:hover {
+  color: var(--gre);
+}
+
+/** Navigation Sillies **/
+.navigation {
+    background: var(--gre);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    min-height: 7.5rem;
+  }
+
+  .logo {
+  margin-top: .05em;
+  margin-left: -45%;
+  padding: 20px;
+  height: 150px;
+  }
+
+.nav-toggle {
+    display: none;
+  }
+  
+  .nav-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-toggle-label span {
+    color: var(--gra);
+    font-size: 1.5em;
+  }
+  
+  nav {
+    position: absolute;
+    text-align: right;
+    top: 100%;
+    right: 0;
+    background: var(--gre);
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 15px;
+    list-style: none;
+  }
+  
+  nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+  
+  nav a {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    color: var(--g);
+    text-decoration: none;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+  
+  nav a:hover {
+    color: var(--gl);
+  }
+  
+  .nav-toggle:checked ~ nav {
+     transform: scale(1,1);
+  }
+  
+  .nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
+
+  .message {
+    background: var(--nav);
+    min-height: 7.5rem;
+    width: 100%;
+  }
+  
+  .sc {
+    color: var(--w);
+    text-align: center;
+  }
+
+/** End Navigation Sillies **/
+
+.hero {
+  height: 60vh;
+  width: 100%;
+  background-image: url(images/Section/Hero.png);
+  background-repeat: none;
+  background-size: cover;
+  background-position: right;
+}
+
+.heroboxa {
+  display: none;
+}
+
+.hhero {
+  color: var(--g);
+  text-align: left;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.phero {
+  color: var(--gre);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/** Section Sillies **/
+
+.ramblepic {
+  background-image: url(images/Section/HIA.jpg);
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  width: 100%;
+}
+
+.secImg {
+  width: 100%;
+}
+
+.contentType, .content2, .contentType2, .rcards, .rcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bpad {
+  padding-bottom: 20px;
+}
+
+.rcard {
+  background: var(--w);
+  width: 80vw;
+  margin-bottom: 30px;
+}
+
+.rrr {
+  width: 80vw;
+}
+
+.hcenter {
+  text-align: center;
+}
+
+.padt {
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.rr {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.vbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+/** Footer Time **/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gre);
+  padding-top: 20px;
+  padding-bottom: 3px;
+}
+
+.foot {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--g);
+  padding: 30px;
+}
+
+@media screen and (min-width: 850px) {
+  
+    /** Navigation Sillies **/
+    .nav-toggle-label {
+      display: none;
+    }
+    
+  .navigation {
+      display: grid;
+      grid-template-columns: 1fr auto minmax(600px, 6fr) 1fr;
+    }
+    
+    .logo {
+      grid-column: 2/8;
+      margin-left: 0;
+    }
+
+    nav {
+        all:unset;
+        grid-column: 2/4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      
+      nav ul {
+        display: flex;
+        justify-content: flex-end;
+      }
+      
+      nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+      }
+      
+      nav a {
+        opacity: 1;
+        position: relative;
+      }
+      
+      nav a::before {
+        content:"";
+        display: block;
+        height: 3px;
+        background: var(--gra);
+        position: absolute;
+        top: 1.5em;
+        left: 0;
+        right: 0;
+        transform: scale(0,.5);
+        transform-origin: center;
+        transition: transform ease-in-out 300ms;
+      }
+      
+      nav a:hover::before {
+        transform: scale(1,.5);
+      }
+
+      /* Navigation Sillies End */
+
+      .hero {
+        position: relative;
+        height: 70vh;
+      }
+
+      .heroboxb {
+        display: none;
+      }
+
+      .heroboxa {
+        display: block;
+        position: absolute;
+        background-color: rgba(225, 238, 221, .5);
+        width: 45vw;
+        bottom: 0;
+        left: 0;
+      }
+
+      .phero, .hhero {
+        padding-left: 50px;
+      }
+
+      .phero {
+        padding-bottom: 30px;
+        color: var(--b);
+      }
+
+      .hhero {
+        padding-bottom: 0;
+        color: var(--gre);
+      }
+
+      /** Section Sillies **/
+
+      .ramblebox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .ramble {
+        width: 60vw;
+        padding-bottom: 40px;
+      }
+
+      .rambleboxbox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .rambletime {
+        width: 55vw;
+        padding-right: 40px;
+      }
+
+      .ramblepic {
+        height: 150vh;
+        width: 40vw;
+        background-position: left;
+      }
+
+      .sectionHead {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0 20px 0;
+      }
+
+      .type {
+        width: 60vw;
+      }
+
+      .secImg {
+        width: 40vw;
+      }
+
+      .card, .content {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+      }
+
+      .vbox {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .flexr {
+        flex-direction: row-reverse;
+      }
+
+      .contentType {
+        width: 40vw;
+      }
+
+      .camp, .imgBox {
+        width: 25vw;
+        margin-bottom: 0;
+      }
+
+      .rcards {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-bottom: 30px;
+      }
+
+      .rcard, .rrr {
+        width: 27vw;
+        margin: 0;
+      }
+
+      /** Footer Time **/
+
+}
